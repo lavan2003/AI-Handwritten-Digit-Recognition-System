@@ -51,7 +51,6 @@ Optional: Add screenshots of the app interface here for better clarity.
 
 Developer Contact:
 S. Lavan Chary
-lavans110@gmail.com
-Email / LinkedIn / GitHub links can be added here
+Email: lavans110@gmail.com / LinkedIn: www.linkedin.com/in/lavan-srungari-493266297 / GitHub: https://github.com/lavan2003
 
-✅ Enjoy predicting digits with AI!
+Enjoy predicting digits with AI!
