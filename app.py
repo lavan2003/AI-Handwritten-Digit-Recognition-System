@@ -18,16 +18,14 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import time
 
-# ------------------------------
+
 # Original Code: Title and Model
-# ------------------------------
 st.set_page_config(page_title="AI Handwritten Digit Recognition", page_icon="✍️", layout="wide")
 st.markdown("<h1 style='text-align:center;color:#0E86D4;'>AI Handwritten Digit Recognition</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align:center;color:gray;'>Developer: S. Lavan Chary</h3>", unsafe_allow_html=True)
 
-# ------------------------------
+
 # UX Enhancement: Background Gradient
-# ------------------------------
 st.markdown("""
 <style>
 body {
@@ -36,9 +34,8 @@ body {
 </style>
 """, unsafe_allow_html=True)
 
-# ------------------------------
+
 # Load Model with Spinner
-# ------------------------------
 @st.cache_resource
 def load_model():
     with st.spinner('⚡ Loading AI model, please wait...'):
@@ -59,24 +56,21 @@ def load_model():
 
 model = load_model()
 
-# ------------------------------
+
 # Sidebar: Upload & Draw Digit
-# ------------------------------
 st.sidebar.title("🖊️ Draw or Upload a Digit")
 st.sidebar.info("Draw a number (0–9) on paper or upload an image. The AI will predict instantly!")
 uploaded_file = st.sidebar.file_uploader("Upload Image", type=["png", "jpg", "jpeg"])
 
-# ------------------------------
+
 # Techy Feature: Refresh Model
-# ------------------------------
 if st.sidebar.button("🔄 Refresh Model"):
     with st.spinner("Reloading model, please wait..."):
         model = load_model()
     st.sidebar.success("Model reloaded successfully!")
 
-# ------------------------------
+
 # Techy Feature: Random Example
-# ------------------------------
 if st.sidebar.button("🎲 Try Random Digit"):
     mnist = keras.datasets.mnist
     (_, _), (x_test, y_test) = mnist.load_data()
@@ -96,9 +90,8 @@ if st.sidebar.button("🎲 Try Random Digit"):
     ax.set_ylabel("Confidence")
     st.pyplot(fig)
 
-# ------------------------------
+
 # Original File Upload Prediction with UX
-# ------------------------------
 if uploaded_file:
     with st.spinner("🔍 Processing your image, please wait..."):
         image = tf.keras.utils.load_img(uploaded_file, target_size=(28, 28), color_mode='grayscale')
@@ -127,3 +120,4 @@ if uploaded_file:
     st.pyplot(fig)
 else:
     st.info("👈 Upload a digit image to get prediction.")
+
