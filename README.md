@@ -2,10 +2,10 @@ AI Handwritten Digit Recognition 🖊️
 
 Developer: S. Lavan Chary
 
-This project is a web-based AI application built using Streamlit and TensorFlow/Keras to recognize handwritten digits (0–9) from images or drawings. Users can either draw a digit or upload an image, and the AI will predict the digit instantly along with a confidence score.
+This project is a web-based AI application built using Streamlit and TensorFlow/Keras to recognize handwritten digits (0–9) from images . Users can upload an image or press "Try a random number", and the AI will predict the digit instantly along with a confidence score.
 
 Features:
-Draw or Upload: Users can draw digits on paper or upload images in png, jpg, or jpeg formats.
+Upload: Users can draw digits on paper or upload images in png, jpg, or jpeg formats.
 Instant Prediction: The model predicts the digit immediately.
 Confidence Visualization: Displays a probability bar chart and JSON format confidence for all digits.
 Random Example: Users can try a random MNIST digit to see predictions.
